@@ -1,3 +1,8 @@
+# Supabase PW:
+vAxbaf-tebpog-0nekmu
+
+
+
 # Assignment Final
 
 #### The full circle
