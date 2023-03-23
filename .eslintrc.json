@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["@helgituan/eslint-plugin-peruepli-nomoment-eslint-rule"],
+  "rules": {
+    "@helgituan/peruepli-nomoment-eslint-rule/no-moment": "error"
+  }
 }
+

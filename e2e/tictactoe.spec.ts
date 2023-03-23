@@ -5,8 +5,10 @@ import { test, expect } from '@playwright/test';
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
+  const Title = page.getByPlaceholder("Tic Tac Toe");
+  
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await expect(page).toHaveTitle("Tic Tac Toe", /Playwright/);
 });
 
 test('get started link', async ({ page }) => {

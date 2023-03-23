@@ -21,7 +21,8 @@
     "moment": "^2.29.1",
     "next": "13.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "@helgituan/eslint-plugin-peruepli-nomoment-eslint-rule": "git+https://github.com/helgituan/ForbidsMoments.git"
   },
   "devDependencies": {
     "@playwright/test": "^1.31.1",

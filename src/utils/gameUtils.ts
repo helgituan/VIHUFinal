@@ -1,6 +1,13 @@
 import { Game } from "../lib/gameStore";
 import { EMOJI, pepTalks, Sign } from "./constants";
 
+export function calculateDraw(
+  squares: string[]
+): Boolean {
+  if (squares.includes("")) return false
+  return true
+}
+
 export function calculateWinner(
   squares: Sign[] | string[]
 ): Sign | null | string {
