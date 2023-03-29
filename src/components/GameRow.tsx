@@ -10,6 +10,15 @@ interface Props {
   game: Game;
 }
 
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+});
+
 export function GameRow({ game }: Props) {
   const winner = calculateWinner(game.moves);
   return (
@@ -27,7 +36,7 @@ export function GameRow({ game }: Props) {
             </div>
           </div>
           <div className={styles.dateFromNow}>
-            Created: {game.createdAt?.toLocaleDateString()}
+            Created: {game.createdAt ? dateFormatter.format(new Date(game.createdAt)) : 'Unknown'}
           </div>
         </div>
         <div>

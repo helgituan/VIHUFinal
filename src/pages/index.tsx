@@ -46,6 +46,7 @@ const Home: NextPage = () => {
           }}
         >
           <input
+            data-testid="playerName"
             className={styles.input}
             value={playerName}
             placeholder={`${EMOJI[Sign.X]} Your Name`}
@@ -53,6 +54,7 @@ const Home: NextPage = () => {
             required
           />
           <input
+            data-testid="playerName2"
             className={styles.input}
             value={secondPlayerName}
             placeholder={`${EMOJI[Sign.O]} Opponent Name`}
