@@ -4,7 +4,7 @@ import {
   getPlayerNameFromSign,
   getRandomPepTalk,
   getWhosTurnItIs,
-  calculateDraw
+  calculateDraw,
 } from "../utils/gameUtils";
 
 import styles from "../styles/Home.module.css";
@@ -22,7 +22,7 @@ export function BoardHeader({ game }: Props) {
     return <WinnerAnnouncement winner={winner} game={game} />;
   }
   if (draw) {
-    return <h2>ITS A DRAW 🤮</h2>
+    return <h2 data-testid={"draw"}>ITS A DRAW 🤮</h2>;
   }
   return (
     <h1 className={styles.title}>
@@ -31,5 +31,3 @@ export function BoardHeader({ game }: Props) {
     </h1>
   );
 }
-
-

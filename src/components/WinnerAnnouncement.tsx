@@ -10,7 +10,7 @@ interface Props {
 
 export function WinnerAnnouncement({ winner, game }: Props) {
   return (
-    <h1 className={styles.title}>
+    <h1 data-testid={"Winner"} className={styles.title}>
       🎉🎊🍾🏆
       <div>{getPlayerNameFromSign(winner, game)} Won</div>
     </h1>
