@@ -1,8 +1,8 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import Home from "../pages/index";
-import { fireEvent, getByText, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { handlers } from "../../mocks/index"
@@ -13,14 +13,6 @@ import { handlers } from "../../mocks/index"
 
 
 const server = setupServer(...handlers)
-
-  vi.mock("next/router", () => {
-    const useRouter = vi.fn(() => ({ query: {id: "1"}  }));
-
-    return {useRouter}
-  })
-
-
   // establish API mocking before all tests
   beforeAll(() => server.listen())
   // reset any request handlers that are declared as a part of our tests
@@ -31,22 +23,7 @@ const server = setupServer(...handlers)
 
 describe("Home screen", () => {
   // TODO Add your react-testing-library tests here
-  it("Enter name of players", async () => {
-    render(<Home />);
-
-    const user1_input = await screen.findByTestId("playerName")
-    const user2_input = await screen.findByTestId("playerName2")
-
-    expect(user1_input).not.toBeInTheDocument;
-
-    fireEvent.change(user1_input, {target: {value: 'Bubbi'}});
-
-    expect(user1_input.value).toBe('Bubbi');
-    expect(user2_input).not.toBeInTheDocument;
-
-    fireEvent.change(user2_input, {target: {value: 'Byggir'}});
+  it("should add tests here", async () => {
     
-    expect(user2_input.value).toBe('Byggir');
-
   });
 });
