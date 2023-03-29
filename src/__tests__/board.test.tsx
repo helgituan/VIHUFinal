@@ -2,20 +2,18 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { describe, it, expect, vi } from "vitest";
 import Home from "../pages/index";
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import {
+  fireEvent,
+  getByText,
+  render,
+  screen,
+  waitFor,
+} from "@testing-library/react";
 import { rest } from "msw";
-import Cell from "../components/Cell";
 import { setupServer } from "msw/node";
 import { handlers } from "../../mocks/index";
+import Board from "../components/Board";
 import { Sign } from "../utils/constants";
-// Good starting point: https://testing-library.com/docs/react-testing-library/example-intro
-
-// TODO setup your mock api here (from the mocks folder)
-// Feel free to add more files to test various other components
-
-/*
-⭕️❌
-*/
 
 vi.mock("next/router", () => {
   const useRouter = vi.fn(() => ({ query: { id: "1" } }));
@@ -32,11 +30,18 @@ afterEach(() => server.resetHandlers());
 // clean up once the tests are done
 afterAll(() => server.close());
 
-describe("Cell component", () => {
-  it("should render an ❌", () => {
-    const { getByText } = render(
-      <Cell onClick={() => {}} number={1} value={Sign.X} readOnly={false} />,
-    );
-    expect(getByText("❌")).toBeInTheDocument();
+describe("Board component", () => {
+  it("should call onMove with updated moves array when a cell is clicked", async () => {
+    const moves = ["", "", "", "", "", "", "", "", ""];
+    const onMove = vi.fn();
+    const { getByTestId } = render(<Board onMove={onMove} moves={moves} />);
+
+    const cell0 = getByTestId("cell-0");
+    fireEvent.click(cell0);
+    expect(onMove).toHaveBeenCalledWith(["X", "", "", "", "", "", "", "", ""]);
+
+    const cell1 = getByTestId("cell-1");
+    fireEvent.click(cell1);
+    expect(onMove).toHaveBeenCalledWith(["", "O", "", "", "", "", "", "", ""]);
   });
 });
