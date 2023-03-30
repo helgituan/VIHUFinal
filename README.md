@@ -25,25 +25,25 @@ The Project is a NextJS application with a Postgres database to keep track of th
 ## The Assignment
 
 #### **Fix it!**
-
-- Currently the game can only tell when someone wins, but not when there is a draw. Write a test for such function and then implement it and add that to the game.
-- Should the game be playable without the players names ?
-- Create a new Github repository with one eslint rule that forbids moment. Release that package, using Github Actions, and use that in this project.
-- There should be lint errors/warnings after applying that rule, fix it.
-- There are no unit tests. Add them.
-- There are no ui integration tests. Add them.
-- There are no e2e tests. Add them.
+✅🚫
+- Currently the game can only tell when someone wins, but not when there is a draw. Write a test for such function and then implement it and add that to the game. ✅
+- Should the game be playable without the players names ? No ✅
+- Create a new Github repository with one eslint rule that forbids moment. Release that package, using Github Actions, and use that in this project. ✅
+- There should be lint errors/warnings after applying that rule, fix it. ✅
+- There are no unit tests. Add them. ✅
+- There are no ui integration tests. Add them. ✅
+- There are no e2e tests. Add them. ✅
 
 #### **Deploy it!**
 
-- Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application using Vercel. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch.
-- Add a link to the application running to this README.md file
+- Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application using Vercel. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch. ✅ I think
+- Add a link to the application running to this README.md file 🚫 not sure what this means
 
 #### **Monitor it!**
 
-- Add Datadog RUM (Real user monitoring) to the application.
-- Create a dashboard to monitor the health of the application.
-- Add a screenshot of the dashboard to this README.md file
+- Add Datadog RUM (Real user monitoring) to the application. 🚫
+- Create a dashboard to monitor the health of the application. 🚫
+- Add a screenshot of the dashboard to this README.md file 🚫
 
 ---
 
