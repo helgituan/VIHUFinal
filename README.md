@@ -1,6 +1,11 @@
 # Supabase PW:
 vAxbaf-tebpog-0nekmu
 
+# Datadog
+![image](https://user-images.githubusercontent.com/28103505/228817264-a28e9409-5e14-4cee-bca4-90fc500101cf.png)
+
+
+
 # Deployments:
 
 [Production Link](https://vihu-final-pgef2up5n-helgituan.vercel.app).
@@ -43,9 +48,9 @@ The Project is a NextJS application with a Postgres database to keep track of th
 
 #### **Monitor it!**
 
-- Add Datadog RUM (Real user monitoring) to the application. 🚫
-- Create a dashboard to monitor the health of the application. 🚫
-- Add a screenshot of the dashboard to this README.md file 🚫
+- Add Datadog RUM (Real user monitoring) to the application. ✅
+- Create a dashboard to monitor the health of the application. ✅
+- Add a screenshot of the dashboard to this README.md file ✅
 
 ---
 
