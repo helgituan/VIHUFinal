@@ -1,7 +1,9 @@
 # Supabase PW:
 vAxbaf-tebpog-0nekmu
-# you'll never know what this is for:
-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
+
+# Deployments:
+
+[Production Link](https://vihu-final-pgef2up5n-helgituan.vercel.app).
 
 
 # Assignment Final
@@ -36,8 +38,8 @@ The Project is a NextJS application with a Postgres database to keep track of th
 
 #### **Deploy it!**
 
-- Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application using Vercel. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch. ✅ I think
-- Add a link to the application running to this README.md file 🚫 not sure what this means
+- Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application using Vercel. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch. ✅ 
+- Add a link to the application running to this README.md file ✅
 
 #### **Monitor it!**
 
